@@ -67,5 +67,19 @@ awful.rules.rules = {
 	{
 		rule_any = { class = { "Dragon-drop" }},
 		properties = { placement = awful.placement.centered }
+	},
+
+	{
+		rule_any = { class = { "edu.fiuba.algo3.App" }},
+		properties = {
+			titlebars_enabled = true,
+			tag = "2"
+		}
+	},
+
+	-- Spawn floating clients centered
+	{
+		rule = { floating = true },
+		properties = { placement = awful.placement.centered }
 	}
 }

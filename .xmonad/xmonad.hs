@@ -5,6 +5,9 @@ import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import XMonad.Hooks.ManageDocks
+import XMonad.Util.Run
+
 myTerminal      = "kitty"
 
 -- Whether focus follows the mouse pointer.
@@ -58,8 +61,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myNormalBorderColor  = "#3b4252"
+myFocusedBorderColor = "#616d87"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -193,7 +196,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
@@ -277,7 +280,9 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = do
+	xmproc <- spawnPipe "xmobar -x 0 /home/carlosecp/.config/xmobar/xmobarrc"
+	xmonad $ docks $ def
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will
