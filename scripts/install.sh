@@ -21,7 +21,7 @@ packages=(
 	kvantum
 	lxappearance
 	noto-fonts
-	pcmanfm
+	pcmanfm-gtk3
 	playerctl 
 	spotifywm
 	xbindkeys 
