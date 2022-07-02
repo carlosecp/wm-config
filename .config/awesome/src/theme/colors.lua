@@ -6,7 +6,7 @@ local naughty   = require("naughty")
 -- wallpaper but still I think I can improve it.
 local function wallpaper(img)
 	local home_dir = os.getenv("HOME")
-	local wallpaper_dir = string.format("%s/%s", home_dir, ".local/share/.wallpapers")
+	local wallpaper_dir = string.format("%s/%s", home_dir, ".wallpapers")
 	return string.format("%s/%s", wallpaper_dir, img)
 end
 

@@ -6,7 +6,7 @@ xset s off
 xrandr --auto --output eDP-1 --right-of DP-1
 flameshot &
 xrdb -load /home/carlosecp/.Xresources
-pcmanfm -d
+pcmanfm -d &
 
 case $session in
     awesome)
