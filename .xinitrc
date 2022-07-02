@@ -10,7 +10,7 @@ xrdb -load /home/carlosecp/.Xresources
 xbindkeys
 xinput set-prop 13 313 0
 xinput set-prop 17 336 1
-xinput set-prop 13 313 1
+xinput set-prop 17 313 1
 libinput-gestures-setup start
 
 pcmanfm -d &
