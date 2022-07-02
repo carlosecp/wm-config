@@ -6,3 +6,4 @@ image/jpg=nsxiv.desktop;gimp.desktop;brave-browser.desktop;
 image/png=nsxiv.desktop;gimp.desktop;brave-browser.desktop;
 image/webp=nsxiv.desktop;gimp.desktop;brave-browser.desktop;
 image/x-webp=nsxiv.desktop;gimp.desktop;brave-browser.desktop;
+inode/directory=pcmanfm.desktop;
