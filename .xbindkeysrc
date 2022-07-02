@@ -26,7 +26,3 @@
 
 "playerctl previous"
 	XF86AudioPrev
-
-# Screnshot
-"flameshot gui"
-	Print
