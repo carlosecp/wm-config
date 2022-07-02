@@ -16,9 +16,9 @@ packages=(
 	acpi
 	awesome
 	dragon-drop
-	maim
 	kvantum
 	lxappearance
+	maim
 	noto-fonts
 	nsxiv
 	pcmanfm-gtk3
@@ -26,7 +26,9 @@ packages=(
 	spotifywm
 	xbindkeys 
 	xclip-git
+	xorg
 	xorg-xbacklight 
+	xorg-xinit
 )
 
 $install_command ${packages[@]}

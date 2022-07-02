@@ -4,7 +4,7 @@ session=${1:-awesome}
 xset -dpms
 xset s off
 
-xrandr --auto --output eDP1 --right-of DP1
+xrandr --auto --output eDP-1 --right-of DP-1
 xrdb -load /home/carlosecp/.Xresources
 
 xbindkeys
