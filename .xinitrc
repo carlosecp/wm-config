@@ -3,8 +3,7 @@ session=${1:-awesome}
 
 xset -dpms
 xset s off
-xrandr --auto --output eDP1 --right-of DP1
-emacs --daemon &
+xrandr --auto --output eDP-1 --right-of DP-1
 flameshot &
 xrdb -load /home/carlosecp/.Xresources
 

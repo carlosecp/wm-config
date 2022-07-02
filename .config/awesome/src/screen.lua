@@ -1,11 +1,9 @@
-local awful = require("awful")
+local awful     = require("awful")
 local beautiful = require("beautiful")
-local gears = require("gears")
-local wibox = require("wibox")
+local gears     = require("gears")
+local wibox     = require("wibox")
 
 require("awful.autofocus")
-
-local wibar = require("src.widgets.wibar")
 
 local function set_wallpaper(s)
 	if beautiful.wallpaper then
@@ -24,10 +22,13 @@ awful.layout.layouts = {
 	awful.layout.suit.floating,
 }
 
+local wibar = require("src.widgets.wibar")
+local tags  = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
+
 awful.screen.connect_for_each_screen(function(s)
 	set_wallpaper(s)
 
-	awful.tag(wibar.tags, s, awful.layout.layouts[1])
+	awful.tag(tags, s, awful.layout.layouts[1])
 
 	s.mypromptbox = awful.widget.prompt()
 
@@ -36,6 +37,7 @@ awful.screen.connect_for_each_screen(function(s)
 		awful.button({ }, 1, function()
 			awful.layout.inc( 1)
 		end),
+		
 		awful.button({ }, 3, function()
 			awful.layout.inc(-1)
 		end)
