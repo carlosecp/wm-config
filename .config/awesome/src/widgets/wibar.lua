@@ -30,6 +30,8 @@ function M.setup(s)
 		{
 			layout = wibox.layout.fixed.horizontal,
 			widgets.kbd,
+			widgets.volume,
+			widgets.battery,
 			systray(),
 			widgets.clock,
 			s.mylayoutbox,

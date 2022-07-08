@@ -6,11 +6,16 @@ local kbd      = awful.widget.keyboardlayout()
 local taglist  = require("src.widgets.taglist")
 local tasklist = require("src.widgets.tasklist")
 
+local battery = require("src.widgets.battery")
+local volume = require("src.widgets.volume")
+
 local widgets = {
+	battery  = battery,
 	clock    = clock,
 	kbd      = kbd,
 	taglist  = taglist,
-	tasklist = tasklist
+	tasklist = tasklist,
+	volume   = volume
 }
 
 return widgets
