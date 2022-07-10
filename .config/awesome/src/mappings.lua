@@ -115,7 +115,12 @@ local mappings = gears.table.join(
 
 	awful.key({ modkey }, "p",
 		function()
-			menubar.show()
+			awful.spawn("rofi -show drun")
+		end),
+
+	awful.key({ }, "Print",
+		function()
+			awful.spawn("flameshot gui")
 		end)
 )
 

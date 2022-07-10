@@ -8,13 +8,13 @@
 	XF86MonBrightnessDown
 
 # Volume mixer
-"amixer set Master 2%+"
+"pamixer -i 2"
 	XF86AudioRaiseVolume
 
-"amixer set Master 2%-"
+"pamixer -d 2"
 	XF86AudioLowerVolume
 
-"amixer set Master 1+ toggle"
+"pamixer --toggle-mute"
 	XF86AudioMute
 
 # Media control

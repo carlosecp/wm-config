@@ -4,16 +4,17 @@ session=${1:-awesome}
 xset -dpms
 xset s off
 
-xrandr --auto --output eDP-1 --right-of DP-1
+xrandr --auto --output eDP1 --right-of DP1
 xrdb -load /home/carlosecp/.Xresources
 
 xbindkeys
-xinput set-prop 13 313 0
-xinput set-prop 17 336 1
-xinput set-prop 17 313 1
+xinput set-prop 14 313 0
+xinput set-prop 18 336 1
+xinput set-prop 18 313 1
 libinput-gestures-setup start
 
 pcmanfm -d &
+flameshot &
 
 picom --experimental-backends &
 
