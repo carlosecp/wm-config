@@ -1,14 +1,7 @@
 local gears = require("gears")
 local naughty   = require("naughty")
 
--- REFACTOR: I don't really like how this works because the user could not have
--- their wallpapers there. In any case this defaults to the awesome default
--- wallpaper but still I think I can improve it.
-local function wallpaper(img)
-	local home_dir = os.getenv("HOME")
-	local wallpaper_dir = string.format("%s/%s", home_dir, ".wallpapers")
-	return string.format("%s/%s", wallpaper_dir, img)
-end
+local wallpapers_dir = "/home/carlosecp/.wallpapers/"
 
 local M = {
 	nord = {
@@ -19,7 +12,27 @@ local M = {
 		bg_urgent     = "#bf616a",
 		border_focus  = "#616d87",
 		border_normal = "#3b4252",
-		wallpaper     = wallpaper("nord_macos.png")
+		wallpaper     = wallpapers_dir .. "nord_mojave.png"
+	},
+	gruvbox = {
+		bg_focus      = "#3c3836",
+		bg_minimize   = "#282828",
+		bg_normal     = "#282828",
+		bg_systray    = "#282828",
+		bg_urgent     = "#cc241d",
+		border_focus  = "#504945",
+		border_normal = "#3c3836",
+		wallpaper     = wallpapers_dir .. "gruvbox_pacman.png"
+	},
+	solarized = {
+		bg_focus      = "#586e75",
+		bg_minimize   = "#002b36",
+		bg_normal     = "#002b36",
+		bg_systray    = "#002b36",
+		bg_urgent     = "#dc322f",
+		border_focus  = "#586e75",
+		border_normal = "#073642",
+		wallpaper     = wallpapers_dir .. "solarized.jpg"
 	}
 }
 

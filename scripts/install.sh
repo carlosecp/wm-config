@@ -20,6 +20,7 @@ packages=(
 	lxappearance
 	maim
 	noto-fonts
+	noto-fonts-emoji
 	nsxiv
 	pcmanfm-gtk3
 	playerctl 

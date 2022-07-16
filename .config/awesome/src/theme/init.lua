@@ -3,14 +3,14 @@ local gears     = require("gears")
 local naughty   = require("naughty")
 
 -- load the default theme and layout.
-local theme_dir = gears.filesystem.get_themes_dir()
-beautiful.init(theme_dir .. "default/theme.lua")
+-- TODO: No quiero hacer esto hardcodeado.
+beautiful.init("/home/carlosecp/.config/awesome/src/theme/default.lua")
 
 -- general style options.
 local opts = {
 	border_width         = 2,
 	font                 = "sans 8",
-	gap_single_client    = true,
+	gap_single_client    = false,
 	useless_gap          = 4,
 	systray_icon_spacing = 4
 }
