@@ -20,4 +20,5 @@ flameshot &
 
 case $session in
     awesome) exec awesome ;;
+	gnome) exec gnome-session ;;
 esac
