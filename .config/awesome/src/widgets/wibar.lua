@@ -14,6 +14,7 @@ end
 
 local M = {}
 
+-- READ: https://awesomewm.org/doc/api/classes/wibox.layout.fixed.html#wibox.layout.fixed.horizontal
 function M.setup(s)
 	s.mytaglist  = awful.widget.taglist(widgets.taglist.setup(s))
 	s.mytasklist = awful.widget.tasklist(widgets.tasklist.setup(s))
@@ -26,19 +27,24 @@ function M.setup(s)
 		layout = wibox.layout.align.horizontal,
 		{
 			layout = wibox.layout.fixed.horizontal,
-			s.mytaglist,
-			s.mypromptbox,
+			s.mytaglist
 		},
-		s.mytasklist,
+		{
+			layout = wibox.container.place,
+			placement = awful.placement.centered,
+			widgets.clock,
+			valign = "center",
+			halign = "center"
+		},
 		{
 			layout = wibox.layout.fixed.horizontal,
+			spacing = 4,
+			systray(),
 			widgets.kbd,
 			widgets.brightness,
 			widgets.volume,
 			widgets.battery,
-			systray(),
-			widgets.clock,
-			s.mylayoutbox,
+			s.mylayoutbox
 		}
 	})
 end

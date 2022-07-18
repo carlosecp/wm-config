@@ -9,7 +9,7 @@ beautiful.init("/home/carlosecp/.config/awesome/src/theme/default.lua")
 -- general style options.
 local opts = {
 	border_width         = 1,
-	font                 = "sans 8",
+	font                 = "Cantarell Bold 9",
 	gap_single_client    = true,
 	useless_gap          = 8,
 	systray_icon_spacing = 4

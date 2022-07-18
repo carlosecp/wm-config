@@ -15,6 +15,7 @@ fi
 packages=(
 	acpi
 	awesome
+	cantarell-fonts
 	dragon-drop
 	kvantum
 	lxappearance
@@ -22,6 +23,7 @@ packages=(
 	noto-fonts
 	noto-fonts-emoji
 	nsxiv
+	paximer
 	pcmanfm-gtk3
 	picom
 	playerctl 
