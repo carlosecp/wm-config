@@ -17,7 +17,10 @@ local M = {}
 function M.setup(s)
 	s.mytaglist  = awful.widget.taglist(widgets.taglist.setup(s))
 	s.mytasklist = awful.widget.tasklist(widgets.tasklist.setup(s))
-	s.mywibox    = awful.wibar({ position = "top", screen = s })
+	s.mywibox    = awful.wibar({
+		position = "top",
+		screen   = s
+	})
 
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,

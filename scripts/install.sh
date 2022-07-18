@@ -23,8 +23,9 @@ packages=(
 	noto-fonts-emoji
 	nsxiv
 	pcmanfm-gtk3
+	picom
 	playerctl 
-	spotifywm
+	rofi
 	xbindkeys 
 	xclip-git
 	xorg
