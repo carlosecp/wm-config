@@ -23,7 +23,7 @@ packages=(
 	noto-fonts
 	noto-fonts-emoji
 	nsxiv
-	paximer
+	pamixer
 	pcmanfm-gtk3
 	picom
 	playerctl 

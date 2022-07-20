@@ -12,7 +12,7 @@ local M = {
 		bg_urgent     = "#bf616a",
 		border_focus  = "#616d87",
 		border_normal = "#3b4252",
-		wallpaper     = wallpapers_dir .. "nord_mojave.png"
+		wallpaper     = wallpapers_dir .. "nord_blob.png"
 	},
 	gruvbox = {
 		bg_focus      = "#3c3836",

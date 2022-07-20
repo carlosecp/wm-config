@@ -14,13 +14,17 @@ end
 
 local M = {}
 
+-- TODO: Deberia definir esto en el tema mas bien...
+local wibar_opacity = "aa"
+
 -- READ: https://awesomewm.org/doc/api/classes/wibox.layout.fixed.html#wibox.layout.fixed.horizontal
 function M.setup(s)
 	s.mytaglist  = awful.widget.taglist(widgets.taglist.setup(s))
 	s.mytasklist = awful.widget.tasklist(widgets.tasklist.setup(s))
 	s.mywibox    = awful.wibar({
 		position = "top",
-		screen   = s
+		screen   = s,
+		bg = gears.color.create_pattern(beautiful.bg_normal .. wibar_opacity)
 	})
 
 	s.mywibox:setup({
