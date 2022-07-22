@@ -120,7 +120,14 @@ local mappings = gears.table.join(
 
 	awful.key({ }, "Print",
 		function()
-			awful.spawn("flameshot gui")
+			awful.spawn.with_shell("maim -s | xclip -select clipboard -t image/png")
+		end),
+
+	awful.key({ modkey }, "Print",
+		function()
+			-- TODO: No me gusta que tenga que hacer referencia a este script,
+			-- pero creo que no tengo de otra realmente.
+			awful.spawn("sh -c '$HOME/.config/rofi/scripts/screenshot.sh'")
 		end)
 )
 

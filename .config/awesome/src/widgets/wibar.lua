@@ -15,7 +15,7 @@ end
 local M = {}
 
 -- TODO: Deberia definir esto en el tema mas bien...
-local wibar_opacity = "aa"
+local wibar_opacity = "bb"
 
 -- READ: https://awesomewm.org/doc/api/classes/wibox.layout.fixed.html#wibox.layout.fixed.horizontal
 function M.setup(s)
@@ -24,7 +24,7 @@ function M.setup(s)
 	s.mywibox    = awful.wibar({
 		position = "top",
 		screen   = s,
-		bg = gears.color.create_pattern(beautiful.bg_normal .. wibar_opacity)
+		-- bg = gears.color.create_pattern(beautiful.bg_normal .. wibar_opacity)
 	})
 
 	s.mywibox:setup({
@@ -33,13 +33,14 @@ function M.setup(s)
 			layout = wibox.layout.fixed.horizontal,
 			s.mytaglist
 		},
-		{
+		--[[ {
 			layout = wibox.container.place,
 			placement = awful.placement.centered,
 			widgets.clock,
 			valign = "center",
 			halign = "center"
-		},
+		}, ]]
+		s.mytasklist,
 		{
 			layout = wibox.layout.fixed.horizontal,
 			spacing = 4,
@@ -48,6 +49,7 @@ function M.setup(s)
 			widgets.brightness,
 			widgets.volume,
 			widgets.battery,
+			widgets.clock,
 			s.mylayoutbox
 		}
 	})

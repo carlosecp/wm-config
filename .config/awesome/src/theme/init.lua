@@ -22,18 +22,11 @@ gears.table.crush(beautiful, opts)
 gears.table.crush(beautiful, colorscheme)
 
 local notification_opts = {
-	border_width = 2,
-	max_height   = 100,
-	max_width    = 300,
-	opacity      = 0.75
+	notification_border_width = 2,
+	notification_max_height   = 100,
+	notification_max_width    = 300,
+	notification_opacity      = 0.75
 }
-
-setmetatable(notification_opts, {
-	__index = function(table, key)
-		if table[key] == nil then return nil end
-		return string.format("notification_%s", table[key])
-	end
-})
 
 gears.table.crush(beautiful, notification_opts)
 
